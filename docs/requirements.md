@@ -53,6 +53,9 @@
 - RN09: Pedidos cancelados não podem voltar ao fluxo de envio.
 - RN10: Clientes devem possuir cadastro no sistema para realizar pedidos.
 - RN11: Usuários não autenticados podem consultar produtos, mas devem estar autenticados para realizar pedidos.
+- RN12: Um pedido não pode possuir mais de um pagamento aprovado.
+- RN13: Após a confirmação do pagamento, o sistema deve remover a reserva dos produtos e atualizar o estoque com a venda realizada.
+- RN14: Após a confirmação do pagamento, o pedido deve ser alterado automaticamente para EM_PREPARACAO.
 
 ## Entidades
 
