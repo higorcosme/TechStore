@@ -75,10 +75,11 @@
 2. Sistema envia a solicitação de pagamento para o gateway.
 3. Gateway processa o pagamento.
 4. Gateway retorna confirmação do pagamento.
-5. Sistema altera o status do pagamento para APROVADO.
+5. Sistema confirma o pagamento.
 6. Sistema remove a reserva dos produtos.
 7. Sistema atualiza o estoque dos produtos vendidos.
-8. Sistema altera o status do pedido para EM_PREPARACAO.
+8. Sistema altera o status do pagamento para APROVADO.
+9. Sistema altera o status do pedido para EM_PREPARACAO.
 
 ### Fluxos alternativos:
 
@@ -88,6 +89,6 @@
 
 - Caso o gateway de pagamento esteja indisponível, o pagamento deverá permanecer com status AGUARDANDO.
 
-- Caso a confirmação do pagamento demore, o pedido deverá permanecer aguardando confirmação até receber retorno do gateway.
+- Caso a confirmação do pagamento demore, o pedido deverá permanecer com status AGUARDANDO até receber retorno do gateway.
 
 - Caso o cliente tente realizar múltiplos pagamentos simultâneos para o mesmo pedido, o sistema deverá impedir pagamentos duplicados.
