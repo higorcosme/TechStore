@@ -10,7 +10,7 @@
 
 ## Escopo
 
-- Controlar usuários, produtos, categorias, estoque, carrinho, pedidos, pagamentos, endereços e devoluções.
+- Controlar usuários, produtos, categorias, estoque, carrinho, pedidos, pagamentos, endereços, devoluções e notificações de disponibilidade.
 
 ## Usuários
 
@@ -63,6 +63,16 @@
 - RN18: Solicitações de devolução dentro dos critérios definidos podem ser aprovadas automaticamente pelo sistema.
 - RN19: Solicitações de devolução fora dos critérios automáticos devem ser analisadas por um funcionário.
 - RN20: Produtos sem estoque devem permanecer disponíveis para consulta, porém não podem ser adicionados ao carrinho.
+- RN21: Produtos cadastrados por funcionários devem ser criados com status RASCUNHO.
+- RN22: Produtos em status RASCUNHO não podem ser exibidos aos clientes.
+- RN23: Somente o proprietário pode aprovar um produto para venda.
+- RN24: Somente produtos com status ATIVO podem ser vendidos.
+- RN25: Produtos podem possuir múltiplas imagens.
+- RN26: Produtos sem estoque não podem ser vendidos.
+- RN27: O código interno do produto deve ser gerado automaticamente pelo sistema.
+- RN28: Produtos podem ser salvos como rascunho antes da aprovação.
+- RN29: Apenas produtos completos podem ser aprovados para venda.
+- RN30: Produtos inativados podem ser reativados pelo proprietário.
 
 ## Entidades
 
@@ -72,6 +82,7 @@
 - Carrinho
 - Pedido
 - ItemPedido
+- ImagemProduto
 - Pagamento
 - Endereço
 - Estoque
@@ -81,11 +92,11 @@
 
 - Como será feita a confirmação de pagamento?
 - O sistema terá integração com gateway de pagamento?
-- Produtos podem possuir mais de uma categoria?
-- Cliente pode comprar sem cadastro?
 - Pedido pode ser alterado após pagamento?
 - Como funciona o cancelamento de pedidos?
 - Como será realizado o cálculo do valor total do pedido?
+- Qual será o gateway de pagamento utilizado?
+- Qual será a política de devolução (prazo)?
 
 ## Decisões Técnicas Pendentes
 
