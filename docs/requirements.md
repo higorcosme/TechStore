@@ -40,6 +40,7 @@
 - RN03: Funcionários podem cadastrar pedidos.
 - RN04: Funcionários podem alterar estoque.
 - RN05: Quando um produto possuir menos de 5 unidades em estoque, o sistema deverá gerar um aviso de estoque baixo.
+- RN06: Apenas usuários autenticados podem acessar o sistema.
 
 ## Entidades
 
