@@ -2,11 +2,11 @@
 
 ## UC02 - Processar Pagamento
 
-### Ator Principal:
+### Ator principal:
 
 - Cliente
 
-### Atores Secundários:
+### Atores secundários:
 
 - Gateway de pagamento
 
