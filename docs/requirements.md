@@ -31,8 +31,6 @@
 
 ## Requisitos Não Funcionais
 
--
-
 ## Regras de Negócio
 
 - RN01: Somente proprietário pode excluir produtos.
@@ -41,6 +39,9 @@
 - RN04: Funcionários podem alterar estoque.
 - RN05: Quando um produto possuir menos de 5 unidades em estoque, o sistema deverá gerar um aviso de estoque baixo.
 - RN06: Apenas usuários autenticados podem acessar o sistema.
+- RN07: O sistema deve impedir a criação de pedidos quando a quantidade solicitada de um produto for maior que o estoque disponível.
+- RN08: Um pedido deve possuir um status que representa sua etapa atual no processo de venda.
+- RN09: Todo pedido criado deve iniciar com o status AGUARDANDO_PAGAMENTO.
 
 ## Entidades
 
