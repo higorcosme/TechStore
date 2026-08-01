@@ -6,59 +6,77 @@
 
 ## Objetivo
 
-- Sistema para gerenciar produtos, estoque e pedidos de uma loja de produtos eletrônicos, facilitando o controle das vendas e do estoque.
+- Sistema de e-commerce para venda e gerenciamento de produtos eletrônicos, permitindo o controle de clientes, pedidos, pagamentos e estoque, além da integração com as operações da loja física.
 
 ## Escopo
 
-- Controlar usuários, produtos, estoque, clientes e pedidos.
+- Controlar usuários, produtos, categorias, estoque, carrinho, pedidos, pagamentos e endereços.
 
 ## Usuários
 
 - Proprietário
 - Funcionário
+- Cliente
 
 ## Requisitos Funcionais
 
 - RF01: Cadastrar produtos.
 - RF02: Editar produtos.
-- RF03: Excluir produtos.
-- RF04: Cadastrar pedidos.
-- RF05: Excluir pedidos.
+- RF03: Inativar produtos.
+- RF04: Permitir que clientes realizem pedidos.
+- RF05: Permitir cancelamento de pedidos.
 - RF06: Editar estoque.
 - RF07: Consultar pedidos.
 - RF08: Consultar produtos.
 - RF09: Acesso com login e senha.
+- RF10: Cliente pode adicionar produtos ao carrinho.
+- RF11: Cliente pode acompanhar o status do pedido.
+- RF12: O sistema deve registrar o pagamento de pedidos.
 
 ## Requisitos Não Funcionais
 
+- RNF01: O sistema deve possuir autenticação segura.
+- RNF02: O sistema deve armazenar senhas de forma criptografada.
+- RNF03: O sistema deve possuir backup dos dados.
+- RNF04: O sistema deve responder às requisições em até 2 segundos em condições normais de uso.
+
 ## Regras de Negócio
 
-- RN01: Somente proprietário pode excluir produtos.
-- RN02: Somente o proprietário pode excluir pedidos.
-- RN03: Funcionários podem cadastrar pedidos.
-- RN04: Funcionários podem alterar estoque.
-- RN05: Quando um produto possuir menos de 5 unidades em estoque, o sistema deverá gerar um aviso de estoque baixo.
-- RN06: Apenas usuários autenticados podem acessar o sistema.
-- RN07: O sistema deve impedir a criação de pedidos quando a quantidade solicitada de um produto for maior que o estoque disponível.
-- RN08: Um pedido deve possuir um status que representa sua etapa atual no processo de venda.
-- RN09: Todo pedido criado deve iniciar com o status AGUARDANDO_PAGAMENTO.
+- RN01: Somente o proprietário pode inativar produtos.
+- RN02: Somente o proprietário pode cancelar pedidos.
+- RN03: Clientes podem criar pedidos através do sistema.
+- RN04: Funcionários podem gerenciar pedidos realizados.
+- RN05: Funcionários podem alterar estoque.
+- RN06: Quando um produto possuir menos de 5 unidades em estoque, o sistema deverá gerar um aviso de estoque baixo.
+- RN07: Apenas usuários autenticados podem acessar o sistema.
+- RN08: Ao criar um pedido, os produtos devem ser reservados até a confirmação ou cancelamento do pagamento.
+- RN09: Pedidos cancelados não podem voltar ao fluxo de envio.
 
 ## Entidades
 
 - Usuário
-- Cliente
-- Pedido
 - Produto
+- Categoria
+- Carrinho
+- Pedido
 - ItemPedido
+- Pagamento
+- Endereço
+- Estoque
 
 ## Dúvidas
 
-- Um produto pode ser editado?
-- Um pedido pode ser editado após ser criado?
+- Como será feita a confirmação de pagamento?
+- O sistema terá integração com gateway de pagamento?
+- Produtos podem possuir mais de uma categoria?
+- Cliente pode comprar sem cadastro?
+- Pedido pode ser alterado após pagamento?
+- Como funciona o cancelamento de pedidos?
+- Como será realizado o cálculo do valor total do pedido?
 
-## Pendências Técnicas
+## Decisões Técnicas Pendentes
 
-- Sistema web?
-- Segurança do sistema?
-- Tempo máximo de resposta?
-- Backups?
+- Tecnologia do backend.
+- Banco de dados utilizado.
+- Forma de autenticação.
+- Estratégia de deploy.
