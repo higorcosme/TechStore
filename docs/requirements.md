@@ -51,6 +51,8 @@
 - RN07: Apenas usuários autenticados podem acessar o sistema.
 - RN08: Ao criar um pedido, os produtos devem ser reservados até a confirmação ou cancelamento do pagamento.
 - RN09: Pedidos cancelados não podem voltar ao fluxo de envio.
+- RN10: Clientes devem possuir cadastro no sistema para realizar pedidos.
+- RN11: Usuários não autenticados podem consultar produtos, mas devem estar autenticados para realizar pedidos.
 
 ## Entidades
 
